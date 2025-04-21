@@ -6,10 +6,17 @@
  * Not gate:
  * if (in) out = 0, else out = 1
  */
+ //// Construct chip not using nand gates
 CHIP Not {
-    IN in;
-    OUT out;
+    IN in;  // input
+    OUT out; 
+
+    
 
     PARTS:
-    //// Replace this comment with your code.
+    //// Construct chip not using nand gates
+    Nand(a=in, b=in, out=out); // out = nand(in, in) = not(in)
+    // Nand(a=in, b=in, out=out); // out = nand(in, in) = not(in)
+    
+
 }
